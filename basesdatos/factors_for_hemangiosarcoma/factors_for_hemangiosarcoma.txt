@@ -1,0 +1,11 @@
+Azzurra Carnio, Claudia Eleni, Cristiano Cocumelli, Leticia Elisa Bartolomé Del Pino, Sara Simeoni, Valentina Spallucci, Paola Scaramozzino,
+Evaluation of intrinsic and extrinsic risk factors for dog visceral hemangiosarcoma: A retrospective case-control study register-based in Lazio region, Italy,
+Preventive Veterinary Medicine,
+Volume 181,
+2020,
+105074,
+ISSN 0167-5877,
+https://doi.org/10.1016/j.prevetmed.2020.105074.
+(https://www.sciencedirect.com/science/article/pii/S0167587719308888)
+Abstract: The genetic and breed susceptibility of visceral hemangiosarcoma in dogs has been studied, but there is no evidence of environmental risk factors as reported in human medicine. We conducted a case-control study in which the sampling population was the list of canine oncology cases of the Animal Tumour Registry of Lazio region, Italy (2009–2017). We defined cases as dogs with visceral hemangiosarcoma and controls as dogs affected by another neoplasm. The ratio between controls and cases was 3:1. Analysed variables were: age, weight, sex, reproductive status, size, breed, nutrition habit, living environment and location of the house. We performed a preliminary univariate analysis to select potential risk factors (p-value < 0.2) then entered in a forward stepwise logistic regression model. Ninety-three cases enrolled in the study were compared with 279 controls. The multivariable logistic regression identified age, reproductive status and breed as significant risk factors. Results showed an increasing risk with increasing age for age classes 6−10 and > 10 years old (OR = 9.69, 95 % CI: 1.21–77.62; OR = 14.01, 95 % CI: 1.65–119.03). Neutered animals (male and female) were at greater risk compared to intact ones. The breeds at greatest risk were German shepherd (OR = 4.17, 95 % CI: 1.25–13.86) and mixed breed (OR = 3.50, 95 % CI: 1.44–8.51). The last finding could be explained by the genetic origin of the animals, which may include German shepherd or another possible breed at risk. No other individual or environmental variables were identified as risk factors. The findings of this work indicate that genetic predisposition is the key element in visceral hemangiosarcoma development.
+Keywords: Hemangiosarcoma; Cancer registry; Dog; Case-control study; One health

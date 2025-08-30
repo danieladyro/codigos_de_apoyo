@@ -1,0 +1,987 @@
+---
+title: "Cross-sectional survey conducted with farmers on lameness occurrence in small-scale grazing dairy herds visited twice on the West part of Santa Catarina, Brazil, 2015"
+author: "Jose Bran"
+date: "2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r loading packages}
+
+library(ggplot2)
+library(vcdExtra)
+library(data.table)
+library(epitools)
+library(scales)
+library(QCA)
+library(car)
+library(lme4)
+library(plyr)
+library(MASS)
+library(multilevel)
+library(car)
+library(blmeco)
+```
+
+
+```{r Loading data}
+
+survey <- read.csv("surv.csv")
+
+View(survey)
+```
+
+
+#Describing data
+
+#Workers per farm
+
+```{r Description}
+
+summary(survey$workers)
+sd(survey$workers)
+```
+
+
+#Age of manager
+
+```{r Description2}
+
+summary(survey$age_man)
+sd(survey$age_man)
+```
+
+#Schooling level of farmers
+
+1= elementary 2= secundary 3= post-secundary 
+```{r Description of data}
+
+count(survey$school)
+```
+
+#For how long the farmers have been engaged in dairy production?
+
+```{r Description3 }
+
+summary(survey$years_prod)
+sd(survey$years_prod)
+```
+
+#Herd size
+
+```{r Lactating herd size on first visit}
+
+summary(survey$milk.cows.1)
+sd(survey$milk.cows.1)
+```
+
+
+```{r Lactating herd size on second visit}
+
+summary(survey$milk.cows.2)
+sd(survey$milk.cows.2)
+```
+
+#Farmer estimated lameness prevalence
+
+```{r Description: first visit}
+
+summary(survey$farmer.prev.1)
+sd(survey$farmer.prev.1)
+```
+
+PS: One missing data on second visit
+
+```{r Description: second visit}
+
+summary(survey$farmer.prev.2)
+sd(survey$farmer.prev.2, na.rm = T)
+```
+
+
+# Questionnaire conducted with farmers:
+
+#A. Is lameness the main health problem of lactating cows in your farm?
+
+```{r}
+
+count(survey$lam_hf)
+```
+
+```{r 15.91% of farmers considered that lameness is the main health problem}
+
+7/44*100
+```
+
+##Table occurrence of vet estimated lameness by categories of answers
+
+```{r Clinical lameness, first}
+
+ddply(survey, c("lam_hf"), summarize, lam.mainp1 = mean(clin.lam.1, na.rm=T),
+      std = sd(clin.lam.1, na.rm=T),
+      n = sum(!is.na(clin.lam.1)),
+      med= median(clin.lam.1,na.rm=T),
+      se = std/sqrt(n))
+```
+
+
+```{r Severe lameness, first}
+
+ddply(survey, c("lam_hf"), summarize, lam.mains1 = mean(sev.lam.1, na.rm=T),
+      std = sd(sev.lam.1, na.rm=T),
+      n = sum(!is.na(clin.lam.1)),
+      med= median(sev.lam.1,na.rm=T),
+      se = std/sqrt(n))
+```
+
+# B. Is lameness one out of the three most common health problems of lactating cows in your farm?
+
+```{r}
+
+count(survey$lam_h)
+```
+
+```{r 52.27% of farmers consider lameness as one out of the three common health problems}
+
+23/44*100
+```
+
+
+#Tables: prevalence of vet estimated lameness by category of answers
+
+```{r Table Clinical lameness, first}
+
+ddply(survey, c("lam_h"), summarize, lam.o. = mean(clin.lam.1, na.rm=T),
+      std = sd(clin.lam.1, na.rm=T),
+      n = sum(!is.na(clin.lam.1)),
+      med= median(clin.lam.1,na.rm=T),
+      se = std/sqrt(n))
+```
+
+```{r Table Severe lameness, first}
+
+ddply(survey, c("lam_h"), summarize, lam.o. = mean(sev.lam.1, na.rm=T),
+      std = sd(sev.lam.1, na.rm=T),
+      n = sum(!is.na(sev.lam.1)),
+      med= median(sev.lam.1,na.rm=T),
+      se = std/sqrt(n))
+```
+
+# C Is lameness the main reason for culling cows in your farm?
+
+```{r }
+
+count(survey$cull_lamfi)
+```
+
+```{r 9.1% of farmers consider lameness as the main reason for culling cows}
+
+4/44*100
+```
+
+
+#Tables: prevalence of vet estimated lameness by category of answers
+
+```{r Table Prevalence, first}
+
+ddply(survey, c("cull_lamfi"), summarize, cull.fi = mean(clin.lam.1, na.rm=T),
+      std = sd(clin.lam.1, na.rm=T),
+      n = sum(!is.na(clin.lam.1)),
+      med= median(clin.lam.1,na.rm=T),
+      se = std/sqrt(n))
+```
+
+```{r Table Prevalence, severe}
+
+ddply(survey, c("cull_lamfi"), summarize, cull.fi = mean(sev.lam.1, na.rm=T),
+      std = sd(sev.lam.1, na.rm=T),
+      n = sum(!is.na(sev.lam.1)),
+      med= median(sev.lam.1,na.rm=T),
+      se = std/sqrt(n))
+```
+
+#D. Is lameness one out of the three common reasons for culling cows in your farm?
+
+```{r }
+
+count(survey$cull_lam)
+```
+
+```{r 34.1% of farmers consider lameness as being one of the main reasons for culling cows at farm}
+
+15/44*100
+```
+
+
+##Tables: prevalence of vet estimated lameness by category of answers  
+
+```{r Clinical lameness, first visit}
+
+ddply(survey, c("cull_lam"), summarize, cull = mean(clin.lam.1, na.rm=T),
+      std = sd(clin.lam.1, na.rm=T),
+      n = sum(!is.na(clin.lam.1)),
+      med= median(clin.lam.1,na.rm=T),
+      se = std/sqrt(n))
+```
+
+```{r Severe lameness, first visit}
+
+ddply(survey, c("cull_lam"), summarize, cull = mean(sev.lam.1, na.rm=T),
+      std = sd(sev.lam.1, na.rm=T),
+      n = sum(!is.na(sev.lam.1)),
+      med= median(sev.lam.1,na.rm=T),
+      se = std/sqrt(n))
+```
+
+#Veterinary support: do you have any veterinarian support frequently? occassional?
+
+```{r }
+
+count(survey$asi_vet)
+```
+
+#Continued education: any course on animal health on last two years?
+
+```{r Recoding to avoid typing errors}
+
+survey$conti_for2years <- ifelse(survey$conti_for2years=="Y", "Y","N")
+count(survey$conti_for2years)
+```
+
+```{r Which was the area of formation?}
+
+count(survey$temtica_form)
+```
+
+
+#Univariable associations between answers and vet's estimated lameness
+
+```{r Column with non lame cows on first visit}
+
+cows_nonlame.vet<- survey$Lstot.1-survey$LS_clin.1
+```
+
+```{r Columns with non lame and lame cows - vet estimated}
+
+lame_nonlame.vet<-cbind(survey$LS_clin.1, cows_nonlame.vet)
+```
+
+```{r Columns with non lame and severe lame cows - vet estimated}
+
+lame_nonlame.vet.sev<-cbind(survey$LS_sev.1, cows_nonlame.vet)
+```
+
+
+
+#Simple models (non mixed) or mixed effects model using municipality (town) as random effect were overdispersed
+
+#Including an overdispersion term in the model to account for overdispersion*
+#*i.e., an observation-level random factor
+#Korner-Nievergelt et al., 2015 Chapter 8, 125 p.
+
+```{r Including farm nested into town as random effect}
+
+farm<-factor(survey$farm)
+town<-survey$town
+```
+
+```{r  Is lameness the main health issue of milking cows? logistic regression, vet estimated}
+
+summary(questions.vet_BM<-glmer(lame_nonlame.vet ~ survey$lam_hf + (1|town/farm), family= "binomial"))
+```
+ 
+```{r Odds ratio 1}
+
+exp(fixef(questions.vet_BM))
+```
+
+```{r 95% confidence interval15}
+
+exp(confint(questions.vet_BM, method= "Wald"))
+```
+
+```{r Type II wald x sq test1}
+
+Anova(questions.vet_BM)
+```
+
+assessing goodness of fit
+
+```{r Testing overdispersion3}
+
+dispersion_glmer(questions.vet_BM)
+```
+
+```{r Residuals and random effect plots}
+
+qqPlot(resid(questions.vet_BM))
+plot(questions.vet_BM)
+scatter.smooth(fitted(questions.vet_BM), resid(questions.vet_BM))
+qqPlot(ranef(questions.vet_BM)$town[,1], 
+       main = "Normal QQ-plot, random effect")
+qqPlot(ranef(questions.vet_BM)$farm[,1], 
+       main = "Normal QQ-plot, random effect")
+```
+
+
+```{r Is lameness one of the three health issues? logistic regression, vet estimated}
+
+summary(questions.vet_CM<-glmer(lame_nonlame.vet ~ survey$lam_h + (1|town/farm),  family= "binomial"))
+```
+ 
+```{r Odds ratio2}
+
+exp(fixef(questions.vet_CM))
+```
+
+```{r 95% confidence interval26}
+
+exp(confint(questions.vet_CM, method= "Wald"))
+```
+
+```{r Type II wald x sq test2}
+
+Anova(questions.vet_CM)
+```
+
+Assessing goodness of fit
+
+```{r Testind overdispersion}
+
+dispersion_glmer(questions.vet_CM)
+```
+
+```{r Residual and random effects plots1}
+
+qqPlot(resid(questions.vet_CM))
+plot(questions.vet_CM)
+scatter.smooth(fitted(questions.vet_CM), resid(questions.vet_CM))
+qqPlot(ranef(questions.vet_CM)$town[,1], 
+       main = "Normal QQ-plot, random intercept")
+qqPlot(ranef(questions.vet_CM)$farm[,1], 
+       main = "Normal QQ-plot, random intercept")
+```
+
+ 
+```{r Is lameness the first reason for culling cows? logistic regression, vet estimated}
+
+summary(questions.vet_DM<-glmer(lame_nonlame.vet ~ survey$cull_lamfi + (1|town/farm), family= "binomial"))
+```
+
+```{r Odds ratio3}
+
+exp(fixef(questions.vet_DM))
+```
+
+```{r 95% confidence interval3}
+
+exp(confint(questions.vet_DM, method= "Wald"))
+```
+
+```{r Type II wald x sq test3}
+
+Anova(questions.vet_DM)
+```
+
+Assessing goodness of fit
+
+```{r Testing overdispersion1}
+
+dispersion_glmer(questions.vet_DM)
+```
+
+```{r Residual and random effects plots2}
+
+qqPlot(resid(questions.vet_DM)) 
+plot(questions.vet_DM)
+scatter.smooth(fitted(questions.vet_DM), resid(questions.vet_DM))
+qqPlot(ranef(questions.vet_DM)$farm[,1], 
+       main = "Normal QQ-plot, random intercept")
+qqPlot(ranef(questions.vet_DM)$town[,1], 
+       main = "Normal QQ-plot, random intercept")
+```
+
+ 
+```{r Is lameness one out of the three common reasons for culling cows? logistic regression on vet estimated}
+
+summary(questions.vet_EM<-glmer(lame_nonlame.vet ~ survey$cull_lam + (1|town/farm), family= "binomial"))
+```
+
+```{r Odds ratio4}
+
+exp(fixef(questions.vet_EM))
+```
+
+```{r 95% confidence interval4}
+
+exp(confint(questions.vet_EM, method= "Wald"))
+```
+
+```{r Testing overdispersion2}
+
+dispersion_glmer(questions.vet_EM)
+```
+
+```{r Type II wald x sq test4}
+
+Anova(questions.vet_EM)
+```
+
+```{r Residuals and random effects plots}
+
+qqPlot(resid(questions.vet_EM))
+plot(questions.vet_EM)
+scatter.smooth(fitted(questions.vet_EM), resid(questions.vet_EM))
+qqPlot(ranef(questions.vet_EM)$farm[,1], 
+       main = "Normal QQ-plot, random intercept")
+qqPlot(ranef(questions.vet_EM)$farm[,1], 
+       main = "Normal QQ-plot, random intercept")
+```
+
+
+#Testing if there are associations between vet and farmer estimated lameness prevalence 
+
+#ICC for testing similarity of farmers' and vet estimated lameness
+
+#Using irr package
+
+```{r}
+
+library(irr)
+```
+
+```{r Average one way mixed effects ICC farmer x vet estimated first visit}
+
+icc(cbind(survey$farmer.prev.1, survey$clin.lam.1), unit="average")
+```
+
+```{r Average one way mixed effects ICC farmer x vet estimated -severe- first visit}
+
+icc(cbind(survey$farmer.prev.1, survey$sev.lam.1), unit="average")
+```
+
+```{r Average one way mixed effects ICC farmer x vet estimated second visit}
+
+icc(cbind(survey$farmer.prev.2, survey$clin.lam.2), unit="average")
+```
+
+```{r Average one way mixed effects ICC farmer x vet estimated -severe- second visit}
+
+icc(cbind(survey$farmer.prev.2, survey$sev.lam.2), unit="average")   
+```
+
+#Graphics: farmer and vet estimated lameness prevalence
+
+```{r Barplots putting together farmer and vet estimated lameness - first visit}
+
+farmer_p1<-(survey$farmer.prev.1)
+vet_p1<-(survey$clin.lam.1)
+vet_s1<-(survey$sev.lam.1)
+farm<-survey$farm  
+
+ggplot(mapping = aes(x, y)) +
+  geom_bar(data = data.frame(x = farm, y = vet_p1), width = 0.8, stat = 'identity', fill="black", col="black") +
+  geom_bar(data = data.frame(x = farm, y = vet_s1), width = 0.8, stat = 'identity', fill = 'gray') +
+  geom_bar(data = data.frame(x = farm, y = farmer_p1), width = 0.5, stat = 'identity', fill = 'white', col="gray") +
+  labs(x="Farm",y="Lameness prevalence on first visit") +
+    ggtitle("Clinical lameness, severe lameness and farmer estimated") +
+  theme_gray() + scale_y_continuous(expand = c(0, 0))
+```
+
+```{r Barplots putting together farmer and vet estimated lameness}
+
+ggplot(mapping = aes(x, y)) +
+  geom_bar(data = data.frame(x = farm, y = vet_p1), width = 0.8, stat = 'identity', fill="black") +
+  geom_bar(data = data.frame(x = farm, y = farmer_p1), width = 0.4, stat = 'identity', fill = 'white') +
+  labs(x="Farm",y="Lameness prevalence on first visit") +
+  ggtitle("Clinical lameness and farmer estimated") +
+  theme_gray() + scale_y_continuous(expand = c(0, 0))
+```
+
+```{r Barplots putting together farmer and vet estimated lameness -severe}
+
+ggplot(mapping = aes(x, y)) +
+  geom_bar(data = data.frame(x = farm, y = vet_s1), width = 0.8, stat = 'identity', fill="gray") +
+  geom_bar(data = data.frame(x = farm, y = farmer_p1), width = 0.5, stat = 'identity', fill = 'white', color="gray") +
+  labs(x="Farm",y="Lameness prevalence on first visit") +
+  ggtitle("Severe lameness and farmer estimated") +
+  theme_dark() + scale_y_continuous(expand = c(0, 0))
+```
+
+
+```{r Barplots putting together farmer and vet estimated lameness - second visit}
+
+farmer_p2<-(survey$farmer.prev.2)
+vet_p2<-(survey$clin.lam.2)
+vet_s2<-(survey$sev.lam.2)
+  
+
+ggplot(mapping = aes(x, y)) +
+  geom_bar(data = data.frame(x = farm, y = vet_p2), width = 0.8, stat = 'identity', fill="black", col="black") +
+  geom_bar(data = data.frame(x = farm, y = vet_s2), width = 0.8, stat = 'identity', fill = 'gray') +
+  geom_bar(data = data.frame(x = farm, y = farmer_p2), width = 0.5, stat = 'identity', fill = 'white', col="gray") +
+  labs(x="Farm",y="Lameness prevalence on second visit") +
+    ggtitle("Clinical lameness, severe lameness and farmer estimated") +
+  theme_gray() + scale_y_continuous(expand = c(0, 0))
+```
+
+
+```{r Barplots putting together farmer and vet estimated lameness -severe second visit}
+
+ggplot(mapping = aes(x, y)) +
+  geom_bar(data = data.frame(x = farm, y = vet_s2), width = 0.8, stat = 'identity', fill = 'gray') +
+  geom_bar(data = data.frame(x = farm, y = farmer_p2), width = 0.5, stat = 'identity', fill = 'white', col="dark gray") +
+  labs(x="Farm",y="Lameness prevalence on second visit") +
+    ggtitle("Severe lameness and farmer estimated") +
+  theme_dark() + scale_y_continuous(expand = c(0, 0), limits = c(0,65))
+```
+
+
+```{r Barplots putting together farmer and farmer estimated lameness -first and second visit}
+
+ggplot(mapping = aes(x, y)) +
+  geom_bar(data = data.frame(x = farm, y = farmer_p1), width = 0.8, stat = 'identity', fill = 'gray') +
+  geom_bar(data = data.frame(x = farm, y = farmer_p2), width = 0.5, stat = 'identity', fill = 'white', col="dark gray") +
+  labs(x="Farm",y="Lameness prevalence on second visit") +
+    ggtitle("Farmer estimated on first and second visit") +
+  theme_dark() + scale_y_continuous(expand = c(0, 0), limits = c(0,65))
+```
+
+
+```{r Barplots putting together vet and vet estimated lameness -first and second visit}
+
+ggplot(mapping = aes(x, y)) +
+  geom_bar(data = data.frame(x = farm, y = vet_p1), width = 0.8, stat = 'identity', fill = 'gray') +
+  geom_bar(data = data.frame(x = farm, y = vet_p2), width = 0.5, stat = 'identity', fill = 'white', col="dark gray") +
+  labs(x="Farm",y="Lameness prevalence on first and second visit") +
+    ggtitle("Vet estimated on first and second visit") +
+  theme_dark() + scale_y_continuous(expand = c(0, 0))
+```
+
+
+```{r Dotplot farmer and vet lameness estimated prevalence on first visit}
+
+a1<-data.frame(group="Clinical lameness", value= survey$clin.lam.1)
+b1<-data.frame(group="Severe lameness", value= survey$sev.lam.1)
+c1<-data.frame(group="Farmer estimated lameness", value= survey$farmer.prev.1)
+
+prevalence_visit1<-rbind(a1,b1,c1)
+
+p1<-ggplot(prevalence_visit1, aes(x=group,y=value)) +
+  geom_violin(col="white")+
+  geom_dotplot(binaxis="y", stackdir = "center", dotsize = 0.6, stackratio = 1.1)+
+  guides(fill=FALSE) +
+  theme_classic() +
+  scale_y_continuous(limits = c(0,80))+
+  labs(x= "", y="Prevalence (%)")+
+  ggtitle("Visit 1")+
+  theme(plot.title=element_text(family = "Times", size=rel(1.8), colour = "black"), 
+        axis.text.x = element_blank(),
+        axis.text.y = element_text(family = "Times", colour= "black"),
+        axis.title.y=element_text(family = "Times", colour = "black", size=rel(1.4)),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank())
+  
+p1
+```
+
+
+```{r Dotplot farmer and vet lameness estimated prevalence on second visit}
+
+a2<-data.frame(group="Clinical lameness", value= survey$clin.lam.2)
+b2<-data.frame(group="Severe lameness", value= survey$sev.lam.2)
+c2<-data.frame(group="Farmer estimated lameness", value= survey$farmer.prev.2)
+
+prevalence_visit2<-rbind(a2,b2,c2)
+
+p2<-ggplot(prevalence_visit2, aes(x=group,y=value)) +
+  geom_violin(col="white")+
+  geom_dotplot(binaxis="y", stackdir = "center", dotsize = 0.6, stackratio = 1.1)+
+  guides(fill=FALSE) +
+  theme_classic() +
+  scale_y_continuous(limits = c(0,80))+
+  labs(x= "", y="Prevalence (%)")+
+  ggtitle("Visit 2")+
+  theme(plot.title=element_text(family = "Times", size=rel(1.8), colour = "black"), 
+        axis.text.x = element_text(family = "Times", size = rel(1.7), colour = "black"),
+        axis.text.y = element_text(family = "Times", colour= "black"),
+        axis.title.y=element_text(family = "Times", colour = "black", size=rel(1.4)),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank())
+
+
+p2
+```
+
+Multiplot function:
+Source:http://www.cookbook-r.com/Graphs/Multiple_graphs_on_one_page_(ggplot2)/
+
+```{r Using multiplot function}
+
+# Multiple plot function
+#
+# ggplot objects can be passed in ..., or to plotlist (as a list of ggplot objects)
+# - cols:   Number of columns in layout
+# - layout: A matrix specifying the layout. If present, 'cols' is ignored.
+#
+# If the layout is something like matrix(c(1,2,3,3), nrow=2, byrow=TRUE),
+# then plot 1 will go in the upper left, 2 will go in the upper right, and
+# 3 will go all the way across the bottom.
+#
+multiplot <- function(..., plotlist=NULL, file, cols=1, layout=NULL) {
+  library(grid)
+  
+  # Make a list from the ... arguments and plotlist
+  plots <- c(list(...), plotlist)
+  
+  numPlots = length(plots)
+  
+  # If layout is NULL, then use 'cols' to determine layout
+  if (is.null(layout)) {
+    # Make the panel
+    # ncol: Number of columns of plots
+    # nrow: Number of rows needed, calculated from # of cols
+    layout <- matrix(seq(1, cols * ceiling(numPlots/cols)),
+                     ncol = cols, nrow = ceiling(numPlots/cols))
+  }
+  
+  if (numPlots==1) {
+    print(plots[[1]])
+    
+  } else {
+    # Set up the page
+    grid.newpage()
+    pushViewport(viewport(layout = grid.layout(nrow(layout), ncol(layout))))
+    
+    # Make each plot, in the correct location
+    for (i in 1:numPlots) {
+      # Get the i,j matrix positions of the regions that contain this subplot
+      matchidx <- as.data.frame(which(layout == i, arr.ind = TRUE))
+      
+      print(plots[[i]], vp = viewport(layout.pos.row = matchidx$row,
+                                      layout.pos.col = matchidx$col))
+    }
+  }
+}
+
+```
+
+
+```{r Putting together the plots 1 and 2}
+
+multiplot(p1,p2, cols = 1)
+```
+
+
+```{r Saving the plot}
+
+#ggsave("prev2.png", plot= multiplot(p1,p2, cols = 1),dpi = 1000)
+#ggsave("prev2.JPEG", plot= multiplot(p1,p2, cols = 1),dpi = 1000)
+```
+
+
+```{r}
+
+p3<-ggplot(prevalence_visit1, aes(x=group,y=value)) +
+  geom_boxplot(col="black", fill= "white")+
+  theme_gray() +
+  scale_y_continuous(limits = c(0,80))+
+  labs(x= "", y="Prevalence (%)")+
+  ggtitle("Visit 1")+
+  theme(plot.title=element_text(size=rel(1)))
+
+p3
+
+p4<-ggplot(prevalence_visit2, aes(x=group,y=value)) +
+  geom_boxplot(col="black", fill= "white")+
+  theme_gray() +
+  scale_y_continuous(limits = c(0,80))+
+  labs(x= "", y="Prevalence (%)")+
+  ggtitle("Visit 2")+
+  theme(plot.title=element_text(size=rel(1)))
+
+p4
+```
+
+```{r Putting plots on the same graph}
+
+multiplot(p3,p4, cols = 1)
+```
+
+```{r Saving the boxplots}
+
+#ggsave("prev_boxplot.png", plot= multiplot(p3,p4, cols = 1),dpi = 1000)
+```
+
+
+#Looking variation of farmer and vet estimated prevalence
+
+```{r A. clinical lameness prevalence on firts visit}
+
+scatterplot(survey$clin.lam.1~ survey$farmer.prev.1)
+cor.test(survey$clin.lam.1,survey$farmer.prev.1)
+```
+
+```{r B. severe lameness}
+
+scatterplot(survey$sev.lam.1~survey$farmer.prev.1)
+cor.test(survey$sev.lam.1,survey$farmer.prev.1)
+```
+
+```{r A. clinical lameness prevalence on second visit}
+
+scatterplot(survey$clin.lam.2~survey$farmer.prev.2)
+cor.test(survey$clin.lam.2,survey$farmer.prev.2)
+```
+
+```{r B. Severe lameness prevalence on second visit}
+
+scatterplot(survey$sev.lam.2~survey$farmer.prev.2)
+cor.test(survey$sev.lam.2,survey$farmer.prev.2)
+```
+
+#Exact agreeement between farmer and vet estimated
+
+```{r Exact agreement between farmer an veterinanrian of lameness prevalence:1}
+
+count(which(survey$farmer.prev.1==survey$clin.lam.1))
+```
+
+```{r Exact agreement between farmer an veterinanrian of lameness prevalence:2}
+
+count(which(survey$farmer.prev.1==survey$sev.lam.1))
+```
+
+```{r Exact agreement between farmer an veterinanrian of lameness prevalence:3}
+
+count(which(survey$farmer.prev.2==survey$clin.lam.2))
+```
+
+```{r Exact agreement between farmer an veterinanrian of lameness prevalence:4}
+
+count(which(survey$farmer.prev.2==survey$sev.lam.2))
+```
+
+
+#Lameness causes- Reports of farmers on causes of lameness in dairy cows at the farms
+
+```{r 1. Traumatic causes}
+
+table(survey$l_c_trauma)#This contains the other: rock, mob...
+table(survey$l_c_rockyf)
+table(survey$l_c_mob)
+table(survey$l_c_hard_floor)
+```
+
+```{r Proportion1}
+
+mean(survey$l_c_trauma)#This contains the other: rock, mob...
+mean(survey$l_c_rockyf)
+mean(survey$l_c_mob)
+mean(survey$l_c_hard_floor)
+```
+
+
+```{r 2. Inappropriate feeding practices}
+
+table(survey$l_c_feed)#This contains the other: acid, grain...
+table(survey$l_c_acid)
+table(survey$l_c_grain_exc)
+table(survey$l_c_sila_exc)
+table(survey$l_c_lowmin)
+```
+
+```{r Proportion2}
+
+mean(survey$l_c_feed) #This contains the other: acid, grain...
+mean(survey$l_c_acid)
+mean(survey$l_c_grain_exc)
+mean(survey$l_c_sila_exc)
+mean(survey$l_c_lowmin)
+```
+
+```{r 3.Environmental causes}
+
+table(survey$l_c_humid)
+mean(survey$l_c_humid)
+```
+
+```{r 4. Individual features of cows}
+
+table(survey$l_c_indiv)#This contains the other: age, weight...
+table(survey$l_c_age)
+table(survey$l_c_weight)
+table(survey$l_c_conform)
+table(survey$l_c_lbcs)
+```
+
+```{r Proportion3}
+
+mean(survey$l_c_indiv)#This contains the other: age, weight...
+mean(survey$l_c_age)
+mean(survey$l_c_weight)
+mean(survey$l_c_conform)
+mean(survey$l_c_lbcs)
+```
+
+```{r 5. Infectious agents}
+
+table(survey$l_c_infect)
+mean(survey$l_c_infect)
+```
+
+```{r Other causes}
+
+table(survey$l_c_other)
+mean(survey$l_c_other)
+```
+
+```{r Plot: reported causes of lameness}
+
+caus<-c(survey$l_c_trauma, survey$l_c_feed, survey$l_c_humid, survey$l_c_indiv, survey$l_c_infect, survey$l_c_other)
+
+caus_rep <- array(caus, dim = c(44, 6))
+
+colnames(caus_rep)=(c("Trauma", "Feed","Humidity","Indiv","Infect", "Other"))
+colMeans(caus_rep)
+
+barplot(colMeans(caus_rep),
+        ylab = "Proportion of answers", 
+        xlab = "Suggested causes", 
+        main = "Common causes of lameness suggested by farmers 
+        in grazing dairy herds in Southern Brazil (n= 44)")
+
+```
+
+```{r Table on reported causes by farmers}
+
+caus_rep
+```
+
+
+#Reported treatment of lameness on farm
+
+```{r Reported treatment}
+
+count(survey$treatm)
+
+43/44
+1- 0.9772727
+```
+
+```{r Use of antibiotics}
+
+count(survey$t_antib)#This contains the other: local and systemic antib...
+mean(survey$t_antib)
+1-0.6136364
+```
+
+```{r Local antibiotic}
+
+count(survey$t_l_antib)
+mean(survey$t_l_antib)
+1-0.1363636
+```
+
+```{r Parenteral antibiotic}
+
+count(survey$t_p_antib)
+mean(survey$t_p_antib)
+1-0.5454545
+```
+
+
+```{r Parenteral and local antibiotic}
+
+table(survey$t_l_antib, survey$t_p_antib)
+```
+
+
+```{r Parenteral antibiotic-cefalosporins}
+
+count(survey$t_cefalosp)
+mean(survey$t_cefalosp)
+
+1-0.2045455
+```
+
+```{r Parenteral antibiotics-gentamicin - note on raw table data}
+
+1/44
+1-0.02272727
+```
+
+```{r 2. Anti-inflammatories}
+
+count(survey$t_antinf)
+mean(survey$t_antinf)
+1-0.2727273
+```
+
+```{r Diet modifications}
+
+count(survey$t_diet)
+mean(survey$t_diet)
+1-0.1363636
+```
+
+```{r Local treatments (Local treatment: Ointments, Spray, Antiseptics, Disinfectants)}
+
+count(survey$t_loc)
+mean(survey$t_loc)
+1-0.4090909
+```
+
+```{r Footbath}
+
+count(survey$t_fbath)
+mean(survey$t_fbath)
+1-0.09090909
+```
+
+```{r Hoof trimming }
+
+count(survey$t_hoof_trim)
+mean(survey$t_hoof_trim)
+1-0.25
+```
+
+```{r Other treatments}
+
+count(survey$t_other_1)
+mean(survey$t_other_1)
+1-0.09090909
+```
+
+#Preventive measures applied for lameness in cows at farms
+
+```{r Preventive hoof trimming}
+
+count(survey$prev_hooft)
+```
+
+
+```{r Ignores the procedure}
+
+4/44
+```
+
+```{r No}
+
+37/44
+```
+
+```{r Yes: note that these farmers have practiced hoof trimming on some cows, but when asked, this is not a routine practice}
+
+3/44
+```
+
+```{r Preventive footbath: noted that this farmer has a footbath and used in any moments, hwever footbath is not a routine practice}
+
+count(survey$fbath)
+43/44
+1-0.977272
+```

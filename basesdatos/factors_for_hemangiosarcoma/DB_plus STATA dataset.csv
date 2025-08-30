@@ -1,0 +1,372 @@
+﻿ID_progressive number,case/control,GRA ring residence_inside/outside_,ENCI breed,necropsy/biopsy,sex,reproductive status,size,age (years),weight (Kg),Nutrition habit,Living environment,habitat
+1,control,inside,Barbone,biopsy,F,spayed,small,9,nd,dry food,indoor,urban
+2,control,inside,Shih Tzu,biopsy,M,intact male,small,12,nd,dry food,indoor,urban
+3,control,inside,Setter Inglese,biopsy,F,intact female,medium,7,18,homemade food,indoor,urban
+4,control,outside,Cane Da Pastore Tedesco,biopsy,F,intact female,medium,3,nd,dry food,indoor,urban
+5,control,outside,Cane Da Pastore Tedesco,necropsy,M,intact male,medium,9,nd,nd,shelter,rural
+6,control,inside,Shih Tzu,biopsy,M,intact male,small,7,nd,canned food,indoor,urban
+7,case,inside,Cane Da Pastore Maremmano Abruzzese,necropsy,M,intact male,large,8,nd,nd,indoor,urban
+8,control,outside,Cane Da Pastore Tedesco,necropsy,M,intact male,medium,10,nd,nd,outdoor,urban
+9,control,inside,Labrador Retriever,biopsy,F,intact female,medium,5,40,homemade food,outdoor,urban
+10,control,outside,mixed breed,biopsy,F,spayed,small,8,5,dry food,outdoor,rural
+11,case,outside,Cane Da Pastore Tedesco,necropsy,M,nd,medium,9,54,nd,indoor,urban
+12,control,inside,Pitbull,biopsy,F,spayed,medium,8,30,dry food,outdoor,urban
+13,control,inside,mixed breed,biopsy,F,spayed,small,8,nd,dry food,indoor,urban
+14,control,outside,Yorkshire Terrier,biopsy,F,spayed,small,8,2.6,canned food,indoor,urban
+15,control,outside,mixed breed,biopsy,M,neutered,small,9,17,canned food,outdoor,urban
+16,case,inside,Cane Da Pastore Tedesco,necropsy,M,neutered,medium,8,nd,nd,indoor,urban
+17,control,outside,Yorkshire Terrier,biopsy,F,intact female,small,14,4.5,homemade food,indoor,urban
+18,control,inside,West Highland White Terrier,necropsy,M,intact male,small,11,nd,canned food,indoor,urban
+19,case,outside,mixed breed,biopsy,M,intact male,large,7,50,homemade food,outdoor,urban
+20,control,inside,Flat Coated,biopsy,M,nd,medium,3,37,dry food,indoor,urban
+21,case,outside,Boxer,biopsy,M,intact male,medium,7,30,nd,indoor,urban
+22,control,inside,mixed breed,biopsy,M,neutered,small,7,30,homemade food,outdoor,urban
+23,case,outside,mixed breed of/ Siberian Husky,necropsy,F,spayed,medium,9,25,homemade food,indoor and outdoor,urban
+24,control,outside,mixed breed,biopsy,F,intact female,small,8,11,homemade and dry food,indoor,urban
+25,control,outside,Bassotto,biopsy,M,intact male,small,7,6,canned food,indoor,urban
+26,case,outside,Cane Da Pastore Tedesco,biopsy,M,intact male,medium,10,45,dry food,outdoor,urban
+27,control,inside,Beagle,biopsy,M,nd,small,8,15,canned food,indoor and outdoor,urban
+28,control,inside,Cane Da Pastore Tedesco,necropsy,M,intact male,medium,8,50,homemade food,outdoor,urban
+29,control,inside,Boxer,biopsy,F,nd,medium,7,25,dry food,indoor,urban
+30,case,outside,Cane Da Pastore Tedesco,biopsy,F,nd,medium,15,40,homemade food,indoor and outdoor,rural
+31,case,outside,mixed breed of/ Pastore Tedesco,biopsy,M,intact male,medium,11,25,dry food,indoor and outdoor,urban
+32,control,inside,Coker Spainel,biopsy,F,intact female,small,12,15,dry food,indoor and outdoor,urban
+33,control,outside,Shih Tzu,biopsy,M,intact male,small,11,6,dry food,indoor,urban
+34,case,outside,Cane Da Pastore Tedesco,biopsy,F,intact female,medium,8,35,canned food,outdoor,urban
+35,control,inside,Cane Da Pastore Tedesco,biopsy,M,intact male,medium,13,35,dry food,indoor,urban
+36,control,outside,Terranova,necropsy,F,nd,large,9,50,homemade food,outdoor,urban
+37,control,outside,mixed breed,biopsy,M,intact male,small,9,20,dry food,outdoor,urban
+38,control,outside,mixed breed,biopsy,F,spayed,small,9,30,homemade food,indoor,urban
+39,case,inside,Dogue De Bordeaux ,necropsy,M,nd,large,4,nd,nd,outdoor,urban
+40,control,outside,mixed breed of/ Spinone,biopsy,M,intact male,large,2,30,canned food,indoor,urban
+41,control,inside,Rottweiler,biopsy,F,spayed,large,10,37,dry food,indoor,urban
+42,case,outside,mixed breed,biopsy,M,neutered,large,9,33,dry food,indoor and outdoor,urban
+43,control,inside,Cane Da Pastore Tedesco,biopsy,F,intact female,medium,1,25,homemade and dry food,outdoor,urban
+44,case,outside,Bull Dog Inglese,necropsy,F,spayed,medium,9,nd,nd,outdoor,urban
+45,case,outside,mixed breed of/ Maremmano,necropsy,M,intact male,large,7,35,nd,outdoor,urban
+46,control,inside,mixed breed,biopsy,F,spayed,medium,12,"18,450",dry food,indoor and outdoor,urban
+47,control,inside,Pinscher,biopsy,F,intact female,small,6,4,homemade and canned food,indoor,urban
+48,control,outside,mixed breed of/ Pastore Tedesco/Collie,necropsy,M,intact male,medium,8,nd,nd,outdoor,urban
+49,control,inside,Dobermann,biopsy,M,intact male,medium,10,35,homemade food,indoor and outdoor,urban
+50,control,outside,Setter,necropsy,F,nd,medium,16,nd,nd,indoor and outdoor,urban
+51,control,outside,Barbone Miniatura ,biopsy,F,intact female,small,9,6,"homemade, canned and dry food",indoor,urban
+52,control,outside,Cane Da Pastore Tedesco,biopsy,M,intact male,medium,4,30,dry food,outdoor,urban
+53,case,outside,mixed breed of/ Pastore tedesco/Maremmano,necropsy,M,neutered,large,11,nd,nd,outdoor,rural
+54,control,inside,Pitbull,biopsy,F,intact female,medium,9,25,homemade food,indoor,urban
+55,case,inside,mixed breed,necropsy,M,intact male,small,10,25,nd,indoor,urban
+56,control,inside,Yorkshire Terrier,biopsy,M,intact male,small,12,5,homemade food,indoor,urban
+57,control,inside,mixed breed,necropsy,F,spayed,small,9,25,homemade food,indoor,urban
+58,control,inside,Rottweiler,necropsy,M,neutered,large,10,44,nd,shelter,urban
+59,control,outside,mixed breed,biopsy,F,spayed,small,11,nd,homemade and dry food,indoor,urban
+60,control,inside,Cane Da Pastore Tedesco,biopsy,F,spayed,medium,10,35,homemade food,indoor,urban
+61,control,outside,Rhodesian Ridgeback,necropsy,F,nd,large,8,46,nd,indoor and outdoor,urban
+62,control,outside,Cane Da Pastore Tedesco,necropsy,M,intact male,medium,11,nd,dry food,outdoor,urban
+63,control,outside,Volpino Italiano,biopsy,F,spayed,small,16,6.9,canned food,indoor,urban
+64,case,outside,mixed breed,necropsy,F,nd,small,9,nd,dry food,indoor,urban
+65,control,inside,Pointer Inglese,biopsy,M,intact male,medium,7,25,dry food,outdoor,urban
+66,case,outside,mixed breed of/ Maremmano,necropsy,F,nd,large,12,nd,nd,indoor,urban
+67,control,outside,mixed breed,biopsy,M,neutered,medium,19,18,dry food,indoor,urban
+68,control,inside,mixed breed,biopsy,F,spayed,small,5,25,canned food,indoor,urban
+69,case,inside,Cane Da Pastore Tedesco,biopsy,F,spayed,medium,12,25,dry food,indoor,urban
+70,control,inside,mixed breed,biopsy,M,neutered,large,10,36,dry food,indoor,urban
+71,control,inside,Schnauzer,necropsy,M,neutered,medium,1,nd,nd,indoor,urban
+72,control,inside,Cocker Spanel,biopsy,F,nd,small,5,13.5,dry food,indoor and outdoor,urban
+73,control,outside,mixed breed,necropsy,F,spayed,medium,5,10.5,canned and dry food,outdoor,rural
+74,control,outside,mixed breed,biopsy,F,spayed,large,5,40,homemade and canned food,outdoor,urban
+75,control,inside,Bassethound,biopsy,F,intact female,medium,2,25,canned and dry food,indoor,urban
+76,control,inside,Bassotti Tedeschi,necropsy,F,spayed,small,12,7.8,nd,indoor,urban
+77,case,outside,Bovaro Bernese ,necropsy,F,spayed,large,4,nd,nd,outdoor,rural
+78,control,outside,mixed breed,necropsy,F,nd,large,6,nd,nd,indoor,urban
+79,case,outside,Cane Da Pastore Tedesco,biopsy,M,neutered,medium,10,40,dry food,indoor and outdoor,urban
+80,control,outside,Cane Da Pastore Tedesco,biopsy,F,intact female,medium,1,27,"homemade, canned and dry food",indoor and outdoor,urban
+81,control,inside,mixed breed,biopsy,M,intact male,large,11,30,canned and dry food,outdoor,urban
+82,control,outside,Yorkshire Terrier,biopsy,F,spayed,small,10,6.2,canned and dry food,indoor,urban
+83,control,outside,Cane Da Pastore Maremmano Abruzzese,biopsy,F,spayed,large,10,35,homemade and dry food,indoor,urban
+84,control,outside,mixed breed,biopsy,F,spayed,small,9,6.5,homemade and canned food,indoor,urban
+85,case,outside,mixed breed,necropsy,F,nd,small,10,nd,nd,outdoor,urban
+86,control,inside,Maltese,necropsy,F,spayed,small,10,3.5,dry food,indoor,urban
+87,case,outside,Labrador Retriever,necropsy,F,nd,medium,5,nd,nd,nd,urban
+88,control,inside,Rottweiler,biopsy,F,spayed,large,5,35,dry food,indoor,urban
+89,control,inside,Yorkshire Terrier,biopsy,M,neutered,small,11,7,canned and dry food,indoor,urban
+90,control,inside,mixed breed,biopsy,F,intact female,small,13,13,homemade and dry food,indoor,urban
+91,case,inside,Labrador Retriever,necropsy,F,nd,medium,9,nd,nd,indoor,urban
+92,control,outside,mixed breed,biopsy,F,spayed,small,14,6.8,homemade food,indoor,urban
+93,control,inside,Bassotto ,biopsy,F,intact female,small,8,8,homemade and dry food,indoor,urban
+94,control,outside,Cane Da Pastore Tedesco,biopsy,M,intact male,medium,3,nd,dry food,outdoor,rural
+95,control,outside,mixed breed,biopsy,F,spayed,small,10,10.1,"homemade, canned and dry food",indoor,urban
+96,control,outside,Yorkshire Terrier,biopsy,F,spayed,small,9,3.7,"homemade, canned and dry food",indoor,urban
+97,case,inside,mixed breed of/ Pastore Tedesco,necropsy,F,nd,medium,12,nd,nd,indoor,urban
+98,case,inside,Labrador Retriever,necropsy,M,nd,medium,12,nd,nd,indoor,urban
+99,control,inside,mixed breed,biopsy,F,intact female,small,11,9,homemade food,indoor,urban
+100,control,outside,Cane Da Pastore Tedesco,biopsy,F,intact female,medium,4,40,dry food,outdoor,rural
+101,case,inside,Cane Da Pastore Tedesco,necropsy,M,nd,medium,7,nd,nd,outdoor,urban
+102,control,outside,mixed breed,biopsy,F,intact female,medium,0,"23,300",canned and dry food,indoor,urban
+103,control,outside,mixed breed,necropsy,M,intact male,small,11,nd,"homemade, canned and dry food",indoor and outdoor,urban
+104,control,outside,Jack Russel Terrier,biopsy,M,neutered,small,6,8,dry food,outdoor,urban
+105,control,outside,Yorkshire Terrier,biopsy,F,intact female,small,13,nd,dry food,indoor,urban
+106,case,inside,mixed breed,necropsy,F,nd,small,10,nd,nd,indoor,urban
+107,control,outside,mixed breed,biopsy,F,intact female,large,4,30,canned and dry food,indoor,urban
+108,control,inside,Pitbull,biopsy,M,neutered,medium,11,30,dry food,shelter,urban
+109,control,outside,Bassotto Tedesco A Pelo Corto,biopsy,M,intact male,small,0,6.4,dry food,indoor,urban
+110,control,inside,Yorkshire Terrier,biopsy,F,spayed,small,8,4,dry food,shelter,urban
+111,control,outside,Setter Inglese,biopsy,M,intact male,medium,9,nd,canned and dry food,indoor,urban
+112,control,outside,mixed breed,necropsy,F,nd,medium,15,nd,homemade food,indoor and outdoor,urban
+113,case,inside,mixed breed,necropsy,F,spayed,small,8,5,nd,indoor,urban
+114,control,outside,Shih Tzu,biopsy,M,intact male,small,8,7.9,dry food,indoor,urban
+115,control,outside,mixed breed,biopsy,M,intact male,small,10,22,canned food,indoor,urban
+116,control,inside,Cane Da Pastore Tedesco,biopsy,F,intact female,medium,6,31,dry food,outdoor,urban
+117,control,inside,Pinscher,biopsy,F,intact female,small,7,3.1,canned food,indoor,urban
+118,case,inside,mixed breed,necropsy,F,nd,large,9,nd,nd,indoor,urban
+119,control,inside,Rottweiler,biopsy,M,neutered,large,10,55,dry food,indoor,rural
+120,control,outside,mixed breed,biopsy,F,intact female,small,11,7,homemade food,indoor,rural
+121,case,outside,mixed breed,biopsy,M,intact male,small,12,9.9,dry food,indoor,urban
+122,control,inside,Beagle,biopsy,F,spayed,small,13,15,dry food,indoor and outdoor,urban
+123,case,inside,Cane Da Lupo Cecoslovacco,biopsy,F,spayed,medium,11,nd,nd,indoor,urban
+124,control,outside,Pointer Inglese,necropsy,M,nd,medium,2,nd,nd,outdoor,rural
+125,control,inside,Setter Inglese,biopsy,F,intact female,medium,10,18,dry food,shelter,urban
+126,control,inside,mixed breed,biopsy,F,intact female,small,7,7,canned and dry food,shelter,urban
+127,control,inside,mixed breed,biopsy,M,neutered,large,7,30,dry food,shelter,urban
+128,control,outside,Rhodesian Ridgeback,necropsy,M,neutered,large,10,54,homemade and dry food,outdoor,urban
+129,control,outside,Cane Da Pastore Tedesco,biopsy,F,spayed,medium,8,36,dry food,indoor,urban
+130,control,outside,mixed breed of/Labrador,necropsy,M,intact male,medium,8,nd,nd,outdoor,rural
+131,control,inside,mixed breed,biopsy,F,intact female,small,10,nd,canned and dry food,indoor,urban
+132,control,inside,Cane Da Pastore Maremmano Abruzzese,biopsy,M,intact male,large,10,35,dry food,shelter,urban
+133,control,inside,mixed breed,biopsy,F,intact female,large,10,nd,homemade and canned food,indoor,urban
+134,control,outside,Rottweiler,biopsy,F,nd,large,6,35,dry food,indoor,urban
+135,control,inside,Yorkshire Terrier,biopsy,F,intact female,small,9,6,nd,indoor,urban
+136,control,outside,Yorkshire Terrier,biopsy,F,spayed,small,10,4.2,dry food,indoor,urban
+137,control,outside,mixed breed,biopsy,F,intact female,small,11,nd,dry food,indoor and outdoor,urban
+138,case,outside,Setter Inglese,biopsy,F,spayed,medium,12,nd,homemade and canned food,outdoor,urban
+139,control,inside,Yorkshire Terrier,biopsy,F,intact female,small,13,6,canned food,shelter,urban
+140,control,outside,Cane Da Pastore Tedesco,necropsy,F,nd,medium,7,nd,nd,shelter,rural
+141,control,outside,Jack Russell Terrier,biopsy,M,intact male,small,10,"9,360",dry food,indoor,urban
+142,control,outside,mixed breed,biopsy,M,intact male,small,10,nd,homemade and dry food,indoor,urban
+143,case,outside,Boxer,necropsy,F,nd,medium,6,nd,nd,indoor and outdoor,urban
+144,case,outside,mixed breed of/ P.B. Setter Inglese,necropsy,F,nd,medium,8,nd,nd,indoor,urban
+145,control,inside,mixed breed,biopsy,M,intact male,large,7,37,dry food,indoor,urban
+146,case,inside,Cane Da Pastore Tedesco,necropsy,M,intact male,medium,7,nd,nd,shelter,urban
+147,control,inside,Cocker Americano,biopsy,M,intact male,small,12,15,dry food,indoor,urban
+148,case,inside,mixed breed,biopsy,M,neutered,small,8,nd,dry food,indoor,urban
+149,control,outside,mixed breed,biopsy,F,spayed,small,13,7.5,dry food,outdoor,urban
+150,case,inside,Segugio Italiano A Pelo Raso,biopsy,F,nd,medium,12,nd,nd,indoor,urban
+151,control,outside,Pitbull,biopsy,M,neutered,medium,14,22,dry food,indoor,urban
+152,control,outside,Shih Tzu,biopsy,M,intact male,small,9,5.7,dry food,indoor,urban
+153,control,inside,mixed breed,biopsy,M,intact male,small,13,14,canned and dry food,indoor,urban
+154,control,outside,mixed breed,biopsy,F,spayed,small,9,6.9,homemade and dry food,indoor,urban
+155,case,outside,Cane Da Pastore Tedesco,necropsy,M,nd,medium,8,nd,dry food,outdoor,urban
+156,control,outside,Pinscher,biopsy,F,intact female,small,5,2.2,dry food,indoor,urban
+157,case,inside,Cane Da Pastore Tedesco,necropsy,M,intact male,medium,12,30,dry food,shelter,urban
+158,control,outside,Bassotti Tedeschi,biopsy,F,intact female,small,8,8,homemade and dry food,indoor and outdoor,urban
+159,control,outside,Pinscher,biopsy,F,spayed,small,9,2.7,dry food,indoor,urban
+160,control,inside,Cane Da Pastore Tedesco,biopsy,F,intact female,medium,4,28,dry food,outdoor,urban
+161,control,outside,mixed breed,necropsy,F,spayed,small,14,nd,nd,shelter,rural
+162,control,inside,mixed breed,biopsy,F,spayed,large,11,27,dry food,shelter,urban
+163,case,outside,mixed breed,biopsy,F,spayed,small,11,30,canned food,outdoor,urban
+164,control,outside,Epagneul Breton,necropsy,M,nd,medium,12,nd,dry food,outdoor,urban
+165,control,outside,mixed breed,biopsy,F,intact female,large,10,34,nd,outdoor,urban
+166,case,outside,mixed breed,biopsy,F,spayed,large,12,45,dry food,outdoor,urban
+167,control,outside,Setter Irlandese Rosso,biopsy,M,intact male,medium,9,30,dry food,outdoor,urban
+168,control,outside,Yorkshire Terrier,biopsy,F,intact female,small,6,5,canned and dry food,indoor,urban
+169,case,outside,Cane Da Pastore Tedesco,biopsy,M,neutered,large,9,45,dry food,outdoor,rural
+170,control,outside,Beagle,biopsy,M,neutered,small,13,nd,canned food,indoor,urban
+171,control,outside,Pinscher,biopsy,F,intact female,small,7,5,dry food,indoor,rural
+172,case,outside,mixed breed,biopsy,M,nd,small,11,15.5,homemade and dry food,outdoor,urban
+173,case,inside,Cane Da Pastore Tedesco,necropsy,F,nd,medium,7,nd,nd,indoor,urban
+174,control,outside,Bull Terrier Inglese,biopsy,M,intact male,medium,13,nd,dry food,indoor,urban
+175,control,outside,mixed breed,biopsy,F,intact female,small,10,12,homemade and dry food,indoor and outdoor,urban
+176,control,inside,mixed breed,biopsy,M,intact male,large,8,30,dry food,shelter,urban
+177,control,outside,Greyhound,necropsy,M,nd,medium,6,nd,homemade food,outdoor,rural
+178,control,outside,mixed breed,biopsy,F,intact female,small,14,nd,canned food,indoor,urban
+179,case,outside,mixed breed,biopsy,M,intact male,small,13,8,nd,outdoor,urban
+180,control,outside,Bullmastiff,biopsy,F,intact female,large,6,nd,homemade and dry food,indoor and outdoor,rural
+181,control,inside,mixed breed,biopsy,F,spayed,small,12,15,homemade food,indoor,urban
+182,control,inside,Yorkshire Terrier,biopsy,F,intact female,small,6,nd,"homemade, canned and dry food",indoor,urban
+183,control,inside,mixed breed,biopsy,F,spayed,large,10,25,dry food,shelter,urban
+184,control,outside,mixed breed,biopsy,F,intact female,small,7,7.3,canned food,indoor,urban
+185,control,outside,mixed breed,biopsy,F,spayed,medium,8,18,dry food,outdoor,rural
+186,case,inside,mixed breed,necropsy,M,nd,small,10,nd,nd,shelter,urban
+187,control,inside,mixed breed,biopsy,M,neutered,large,14,35,homemade food,indoor,urban
+188,control,outside,Cane Da Pastore Tedesco,biopsy,M,intact male,medium,12,30,dry food,indoor and outdoor,urban
+189,control,outside,mixed breed,biopsy,M,intact male,small,9,23,canned food,indoor,urban
+190,control,outside,Cane Da Pastore Tedesco,biopsy,M,nd,medium,2,nd,dry food,indoor and outdoor,urban
+191,control,outside,Cane Corso,biopsy,F,intact female,large,5,50,dry food,outdoor,rural
+192,case,inside,Golden Retriever,biopsy,M,intact male,medium,12,nd,canned and dry food,indoor,urban
+193,control,outside,mixed breed,biopsy,F,intact female,large,11,38,dry food,shelter,rural
+194,case,outside,Cane Da Pastore Tedesco,biopsy,F,nd,medium,11,25,dry food,outdoor,rural
+195,control,outside,Boxer,biopsy,F,spayed,medium,7,31,dry food,indoor,rural
+196,case,outside,Boxer,biopsy,F,spayed,medium,7,30,dry food,indoor,urban
+197,control,outside,Yorkshire Terrier,biopsy,F,spayed,small,11,4.7,canned food,indoor,urban
+198,control,outside,Rottweiler,biopsy,M,intact male,large,9,47.5,"homemade, canned and dry food",outdoor,urban
+199,control,outside,Cane Da Pastore Maremmano Abruzzese,necropsy,F,spayed,large,12,35,canned food,outdoor,rural
+200,case,inside,Cocker Spaniel Inglese,biopsy,M,intact male,small,10,16,homemade food,indoor,urban
+201,control,outside,Cane Da Pastore Tedesco,biopsy,M,intact male,medium,5,nd,dry food,indoor,rural
+202,control,outside,mixed breed,biopsy,M,neutered,small,12,12,"homemade, canned and dry food",indoor,rural
+203,control,outside,Cane Corso,biopsy,F,spayed,large,8,50,dry food,outdoor,rural
+204,case,inside,Boxer,biopsy,M,nd,medium,8,40,dry food,indoor,urban
+205,case,inside,Labrador Retriever,biopsy,F,spayed,medium,12,nd,"homemade, canned and dry food",indoor,urban
+206,control,inside,mixed breed,biopsy,F,spayed,large,5,35,"homemade, canned and dry food",indoor,urban
+207,control,inside,Labrador Retriever,biopsy,M,intact male,medium,7,35,dry food,indoor,urban
+208,control,inside,Boxer,biopsy,M,intact male,medium,11,30,dry food,indoor,urban
+209,control,outside,Rottweiler,biopsy,M,intact male,large,10,nd,dry food,shelter,rural
+210,control,inside,Yorkshire Terrier,biopsy,F,intact female,small,12,4,"homemade, canned and dry food",indoor,urban
+211,control,inside,Carlino,biopsy,F,spayed,small,9,8,dry food,indoor,urban
+212,control,outside,Volpino Italiano,biopsy,F,intact female,small,12,nd,canned and dry food,indoor and outdoor,urban
+213,control,inside,Boxer,biopsy,F,intact female,medium,7,35,homemade and dry food,indoor,urban
+214,control,outside,Rottweiler,biopsy,F,spayed,large,8,34,dry food,outdoor,rural
+215,case,inside,Boxer,biopsy,F,nd,medium,7,35,homemade and dry food,indoor,urban
+216,control,inside,Barboni,biopsy,F,intact female,small,7,8,dry food,indoor,urban
+217,control,outside,mixed breed,biopsy,F,spayed,small,14,7,nd,indoor and outdoor,urban
+218,case,inside,Boxer,biopsy,F,spayed,medium,9,25,dry food,outdoor,urban
+219,control,outside,mixed breed,necropsy,F,nd,large,8,nd,"homemade, canned and dry food",outdoor,rural
+220,control,outside,mixed breed,biopsy,F,intact female,large,10,nd,canned food,outdoor,urban
+222,case,outside,mixed breed,necropsy,F,intact female,medium,7,nd,nd,indoor,urban
+223,control,outside,mixed breed,biopsy,M,intact male,large,7,40,dry food,outdoor,urban
+224,control,outside,Dogo Argentino,biopsy,M,neutered,large,9,35.5,dry food,outdoor,urban
+225,control,outside,Cane Da Pastore Maremmano Abruzzese,necropsy,M,nd,large,6,nd,"homemade, canned and dry food",outdoor,rural
+226,case,inside,mixed breed,biopsy,F,nd,small,14,nd,nd,nd,nd
+227,control,inside,mixed breed,biopsy,M,neutered,small,10,20,homemade food,indoor,urban
+228,control,outside,mixed breed,biopsy,F,spayed,small,10,11,canned and dry food,indoor,urban
+229,control,inside,Cane Da Pastore Tedesco,necropsy,M,intact male,medium,7,nd,nd,shelter,urban
+230,control,outside,mixed breed,biopsy,F,spayed,small,7,8.7,canned food,indoor,urban
+231,control,outside,mixed breed,biopsy,F,spayed,large,9,nd,canned and dry food,outdoor,rural
+232,case,inside,mixed breed,biopsy,F,spayed,small,14,22,dry food,nd,urban
+233,control,outside,Cane Da Pastore Maremmano Abruzzese,biopsy,M,intact male,large,6,32,dry food,outdoor,urban
+234,control,inside,mixed breed,biopsy,F,intact female,small,10,7,homemade and dry food,indoor,urban
+235,control,inside,Cane Da Pastore Tedesco,biopsy,M,neutered,medium,11,27,dry food,shelter,urban
+236,control,outside,mixed breed,necropsy,M,intact male,large,10,30,homemade food,indoor and outdoor,urban
+237,case,outside,Cane Da Pastore Tedesco,necropsy,M,intact male,medium,8,nd,dry food,indoor and outdoor,urban
+238,control,outside,mixed breed,biopsy,F,intact female,large,7,35,canned food,indoor,urban
+239,case,outside,Boxer,biopsy,F,spayed,medium,8,30,canned and dry food,indoor,urban
+240,control,outside,Epagneul Breton,necropsy,F,spayed,medium,12,16,canned and dry food,indoor,urban
+241,control,inside,mixed breed,biopsy,F,spayed,small,13,nd,homemade and dry food,indoor,urban
+242,control,outside,Setter Inglese,biopsy,F,nd,medium,4,nd,dry food,outdoor,urban
+243,control,outside,Beagle,biopsy,M,neutered,small,13,15,dry food,indoor,urban
+244,control,outside,Labrador Retriever,biopsy,F,spayed,medium,10,28,homemade food,indoor,urban
+245,case,inside,Labrador Retriever,necropsy,M,intact male,medium,8,38,nd,indoor,urban
+246,control,outside,mixed breed,biopsy,F,spayed,small,10,20,dry food,indoor,urban
+247,control,inside,mixed breed,biopsy,F,intact female,small,7,nd,homemade food,indoor,urban
+248,case,outside,mixed breed,biopsy,M,intact male,small,17,4.5,canned and dry food,outdoor,urban
+249,case,outside,Cane Da Pastore Tedesco,biopsy,F,spayed,medium,15,30,"homemade, canned and dry food",outdoor,urban
+250,control,outside,mixed breed,biopsy,F,intact female,small,12,6,canned food,outdoor,urban
+251,control,outside,Bull Terrier Inglese,biopsy,M,neutered,medium,12,nd,homemade and dry food,indoor,urban
+252,control,outside,mixed breed,biopsy,M,intact male,small,9,28,dry food,indoor and outdoor,urban
+253,control,outside,mixed breed,biopsy,M,intact male,large,9,35,dry food,outdoor,urban
+254,case,outside,Boxer,biopsy,F,intact female,medium,10,30,dry food,indoor,urban
+255,control,outside,Cane Da Pastore Tedesco,biopsy,F,intact female,medium,5,30,canned and dry food,indoor,urban
+256,case,outside,mixed breed,biopsy,F,spayed,small,11,20,homemade and dry food,outdoor,rural
+257,control,outside,Bassotti Tedeschi,biopsy,F,intact female,small,8,8,dry food,outdoor,rural
+258,case,outside,Cane Da Pastore Tedesco,necropsy,F,nd,medium,10,nd,nd,outdoor,rural
+259,control,outside,Chihuahua,biopsy,M,intact male,small,10,3.2,canned and dry food,indoor,rural
+260,control,outside,Boxer,biopsy,M,neutered,medium,4,46,dry food,indoor,urban
+261,control,outside,Pinscher,biopsy,F,intact female,small,6,6,dry food,indoor,urban
+262,control,inside,mixed breed,biopsy,F,spayed,small,13,nd,homemade and dry food,indoor and outdoor,urban
+263,control,outside,Bulldog,biopsy,M,intact male,medium,4,30,dry food,outdoor,rural
+264,control,inside,mixed breed,biopsy,F,spayed,small,8,8,homemade and canned food,indoor,urban
+265,case,outside,mixed breed,biopsy,M,intact male,small,13,20,nd,indoor and outdoor,urban
+266,control,outside,mixed breed,biopsy,M,intact male,small,12,15,dry food,indoor,rural
+267,case,inside,Barboncino,necropsy,M,nd,small,14,6.3,"homemade, canned and dry food",indoor,urban
+268,control,outside,Boxer,biopsy,F,intact female,medium,0,30,canned food,outdoor,urban
+269,case,outside,mixed breed,biopsy,F,spayed,large,11,30,homemade food,indoor,urban
+270,control,inside,Cane Da Pastore Maremmano Abruzzese,biopsy,F,spayed,large,6,64,homemade and canned food,outdoor,urban
+271,control,outside,Pinscher,biopsy,M,intact male,small,9,10,canned and dry food,outdoor,urban
+272,control,inside,mixed breed,biopsy,F,spayed,large,10,26,dry food,shelter,urban
+273,control,inside,Beagle,biopsy,F,spayed,small,11,nd,homemade and dry food,indoor,urban
+274,case,outside,mixed breed,biopsy,M,neutered,large,10,29,homemade food,indoor,rural
+275,control,inside,Pinscher,biopsy,F,intact female,small,12,nd,homemade and dry food,indoor,urban
+276,control,outside,Labrador Retriever,necropsy,M,intact male,medium,12,35,canned food,outdoor,urban
+277,control,inside,Cocker Spaniel Inglese,biopsy,M,intact male,small,8,14,dry food,shelter,urban
+278,control,outside,mixed breed,biopsy,F,intact female,medium,2,18,dry food,indoor,urban
+279,control,inside,Boxer,biopsy,F,spayed,medium,9,28,homemade food,indoor,urban
+280,control,outside,Bulldog,necropsy,F,nd,medium,2,nd,dry food,outdoor,urban
+281,control,outside,Boxer,biopsy,F,spayed,medium,10,30,canned and dry food,outdoor,urban
+282,control,inside,mixed breed,biopsy,F,spayed,large,11,nd,dry food,indoor,urban
+283,control,outside,mixed breed,necropsy,F,nd,small,10,nd,nd,outdoor,urban
+284,control,outside,mixed breed,necropsy,M,nd,small,11,nd,nd,outdoor,urban
+285,control,outside,Cocker Spaniel Inglese ,biopsy,F,intact female,small,9,nd,dry food,indoor,rural
+286,control,inside,mixed breed,biopsy,M,neutered,large,10,30,dry food,shelter,urban
+287,control,outside,Yorkshire Terrier,biopsy,F,spayed,small,12,2,canned food,indoor,urban
+288,control,outside,mixed breed of/ Pastore Tedesco,necropsy,F,intact female,medium,10,nd,nd,indoor,urban
+289,control,outside,Bulldog Inglese ,biopsy,F,intact female,medium,5,nd,dry food,outdoor,urban
+290,case,outside,Setter Gordon,biopsy,M,nd,medium,14,26.5,dry food,outdoor,urban
+291,control,outside,mixed breed,necropsy,F,intact female,small,13,nd,nd,indoor,urban
+292,case,inside,Labrador Retriever,necropsy,F,nd,medium,8,nd,nd,indoor,urban
+293,control,inside,Cane Da Pastore Maremmano Abruzzese,biopsy,M,neutered,large,6,40,dry food,shelter,urban
+294,control,inside,Bassotto Kaninchen A Pelo Corto,biopsy,F,intact female,small,12,5,dry food,indoor and outdoor,urban
+295,case,inside,mixed breed,necropsy,F,nd,nd,12,nd,nd,outdoor,rural
+296,case,outside,Cane Da Pastore Tedesco,necropsy,M,nd,medium,6,nd,nd,outdoor,urban
+297,control,inside,mixed breed,biopsy,M,intact male,small,9,10,homemade and dry food,indoor,urban
+298,case,outside,mixed breed,necropsy,M,neutered,medium,10,nd,homemade food,outdoor,urban
+299,control,outside,mixed breed,biopsy,M,intact male,large,12,32,dry food,indoor,urban
+300,control,inside,Yorkshire Terrier,biopsy,F,spayed,small,16,5,canned food,indoor,urban
+301,control,outside,mixed breed,necropsy,M,intact male,small,13,nd,nd,indoor and outdoor,urban
+302,control,outside,Cane Da Pastore Tedesco,biopsy,F,intact female,medium,5,38,dry food,outdoor,rural
+303,control,outside,Boxer,biopsy,F,spayed,medium,7,nd,dry food,indoor,rural
+304,case,outside,mixed breed of/ Patore Tedesco/Labrador,necropsy,M,intact male,medium,6,nd,nd,indoor,urban
+305,control,outside,mixed breed,biopsy,F,spayed,large,16,30,canned and dry food,indoor,urban
+306,control,outside,mixed breed,necropsy,M,intact male,small,11,nd,nd,outdoor,rural
+307,case,outside,mixed breed,necropsy,F,spayed,large,12,nd,homemade food,indoor and outdoor,urban
+308,case,outside,mixed breed,biopsy,M,intact male,medium,10,nd,canned and dry food,indoor,rural
+309,control,outside,Epagneul Breton,biopsy,F,intact female,medium,11,15,"homemade, canned and dry food",outdoor,urban
+310,control,outside,Labrador Retriever,biopsy,M,intact male,medium,7,30,dry food,outdoor,rural
+311,control,outside,Cane Da Pastore Tedesco,biopsy,F,spayed,medium,9,35,nd,indoor,urban
+312,control,inside,mixed breed,biopsy,F,spayed,large,8,23,dry food,indoor,urban
+313,control,inside,Carlino,biopsy,M,intact male,small,10,10,dry food,indoor,urban
+314,control,outside,Labrador Retriever,biopsy,M,intact male,medium,6,40,dry food,outdoor,rural
+315,control,outside,Yorkshire Terrier,necropsy,F,nd,small,15,15,nd,indoor,urban
+316,case,inside,mixed breed,necropsy,F,spayed,small,11,nd,nd,indoor,urban
+317,control,outside,Cane Corso,biopsy,F,spayed,large,6,40,dry food,indoor,urban
+318,control,outside,mixed breed,necropsy,M,nd,large,5,nd,nd,indoor,urban
+319,control,inside,Terranova,biopsy,M,intact male,large,9,40,dry food,shelter,urban
+320,case,outside,Bassotto,necropsy,F,nd,small,8,7.5,dry food,indoor,urban
+321,control,outside,Labrador Retriever,necropsy,M,nd,medium,7,nd,nd,outdoor,rural
+322,control,inside,Pinscher,biopsy,M,intact male,small,10,5,dry food,indoor,urban
+323,control,outside,Boxer,biopsy,M,nd,medium,7,37,dry food,indoor,urban
+324,control,outside,mixed breed,biopsy,F,spayed,medium,10,18,canned and dry food,indoor,urban
+325,control,outside,Segugio Francese,biopsy,F,spayed,medium,2,32,"homemade, canned and dry food",indoor,urban
+326,case,outside,mixed breed of/ Maremmano,necropsy,F,nd,large,8,nd,dry food,indoor and outdoor,rural
+327,control,outside,Chihuahua A Pelo Corto,necropsy,M,nd,small,4,nd,nd,indoor,urban
+328,control,inside,mixed breed,biopsy,F,spayed,small,12,nd,homemade food,indoor,urban
+329,case,outside,Cane Da Pastore Tedesco,necropsy,M,intact male,medium,8,nd,nd,indoor and outdoor,rural
+330,case,outside,mixed breed,biopsy,F,nd,small,12,nd,nd,indoor and outdoor,urban
+331,control,outside,mixed breed,biopsy,F,spayed,small,16,22,homemade food,shelter,urban
+332,control,outside,Siberian Husky,necropsy,M,intact male,medium,16,nd,nd,outdoor,rural
+333,control,outside,mixed breed,biopsy,M,intact male,medium,6,26,dry food,indoor,urban
+334,case,inside,Epagneul Breton,biopsy,F,nd,medium,16,16.6,dry food,indoor,urban
+335,control,outside,mixed breed,biopsy,M,neutered,small,13,13.5,canned and dry food,outdoor,urban
+336,control,inside,mixed breed,biopsy,F,spayed,small,14,23,homemade and dry food,indoor and outdoor,urban
+337,control,inside,mixed breed,biopsy,F,spayed,small,11,10,canned and dry food,indoor,urban
+338,control,inside,mixed breed,biopsy,F,nd,large,11,40,canned and dry food,indoor,urban
+339,control,outside,Boxer,biopsy,M,intact male,medium,7,34,dry food,indoor and outdoor,urban
+340,control,outside,mixed breed,necropsy,M,nd,large,8,nd,canned and dry food,outdoor,urban
+341,control,inside,mixed breed,biopsy,F,spayed,small,15,13,dry food,indoor,urban
+342,control,inside,mixed breed,necropsy,M,intact male,small,11,nd,nd,indoor,urban
+343,control,outside,Labrador Retriever,necropsy,F,nd,medium,3,nd,canned and dry food,outdoor,urban
+344,case,outside,Nd,biopsy,M,nd,medium,10,nd,nd,indoor and outdoor,urban
+345,control,outside,mixed breed,biopsy,F,intact female,medium,9,14,homemade food,indoor and outdoor,rural
+346,control,outside,Cane Corso,biopsy,F,intact female,large,4,39,dry food,outdoor,urban
+347,control,inside,Bulldogue Francese,biopsy,M,intact male,small,1,13,dry food,indoor,urban
+348,case,outside,mixed breed,necropsy,F,nd,medium,10,nd,nd,indoor and outdoor,urban
+349,control,outside,mixed breed,biopsy,F,nd,small,14,10,canned food,indoor,urban
+350,control,inside,mixed breed,biopsy,F,intact female,small,6,6,dry food,indoor,urban
+351,control,outside,Schwarze,necropsy,F,spayed,large,9,nd,nd,outdoor,urban
+352,case,outside,mixed breed,necropsy,M,neutered,medium,7,nd,nd,indoor,urban
+353,control,outside,Cane Da Pastore Maremmano Abruzzese,necropsy,F,spayed,large,10,45,homemade and canned food,outdoor,rural
+354,control,inside,Labrador Retriever,necropsy,M,nd,medium,13,nd,nd,indoor,urban
+355,control,outside,Cane Da Pastore Maremmano Abruzzese,necropsy,M,nd,large,12,30,nd,indoor,urban
+356,control,inside,Cocker,necropsy,F,nd,small,11,nd,homemade food,indoor and outdoor,urban
+357,case,outside,mixed breed,necropsy,M,nd,medium,10,nd,dry food,outdoor,rural
+358,control,outside,Cane Corso,necropsy,M,intact male,large,2,nd,homemade food,indoor and outdoor,urban
+359,control,outside,American Staffordshire Terrier,necropsy,M,neutered,medium,5,nd,nd,indoor,urban
+360,control,inside,Boxer,biopsy,M,intact male,medium,5,40.5,canned and dry food,indoor and outdoor,urban
+361,control,inside,mixed breed,biopsy,M,intact male,medium,8,nd,dry food,indoor,urban
+362,case,inside,mixed breed,necropsy,M,nd,large,16,31,nd,outdoor,rural
+363,control,inside,mixed breed,necropsy,F,spayed,large,13,40,dry food,indoor and outdoor,urban
+364,control,outside,Cocker Spaniel Inglese,biopsy,M,nd,small,14,16,dry food,indoor and outdoor,rural
+365,control,outside,mixed breed,biopsy,M,intact male,large,1,28,dry food,indoor,rural
+366,case,outside,mixed breed,biopsy,M,nd,small,15,nd,dry food,indoor,rural
+367,case,outside,mixed breed,biopsy,M,neutered,medium,10,nd,nd,indoor,urban
+368,case,inside,Beagle,biopsy,F,spayed,small,11,13,homemade and dry food,indoor,urban
+369,control,outside,mixed breed,necropsy,M,nd,large,11,nd,nd,nd,nd
+370,control,inside,Barboncino Toy,necropsy,F,intact female,small,1,nd,nd,indoor,urban
+371,control,inside,mixed breed,necropsy,F,spayed,medium,10,nd,nd,indoor and outdoor,urban
+372,control,inside,Setter Inglese,necropsy,M,intact male,medium,6,nd,nd,indoor,urban
